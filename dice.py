@@ -1,11 +1,9 @@
-import random as r
+from random import choice
 
 while True:
     try:
-        die_count = int(input("How many dice will you roll? >>> "))
-        for _ in range(die_count):
-            dice = ("⚀", "⚁", "⚂", "⚃", "⚄", "⚅")
-            print(r.choice(dice), end='')
-        print('\n')
+        dice = ("⚀", "⚁", "⚂", "⚃", "⚄", "⚅")
+        die_count = int(input("\nHow many dice will you roll? >>> "))
+        [print(choice(dice), end='') for _ in range(die_count)]
     except ValueError:
         print('')
